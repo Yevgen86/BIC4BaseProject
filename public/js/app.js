@@ -31799,9 +31799,13 @@ module.exports = function(module) {
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -31809,7 +31813,8 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+
+window.Vue = vue__WEBPACK_IMPORTED_MODULE_0___default.a;
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -31842,10 +31847,28 @@ var app = new Vue({
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _utilities_Form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utilities/Form */ "./resources/js/utilities/Form.js");
-/* harmony import */ var _components_base_QueryMessage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/base/QueryMessage */ "./resources/js/components/base/QueryMessage.vue");
-window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _utilities_Form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utilities/Form */ "./resources/js/utilities/Form.js");
+/* harmony import */ var _components_base_QueryMessage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/base/QueryMessage */ "./resources/js/components/base/QueryMessage.vue");
+/**
+ * Load all needed JavaScript modules for working with ajax-requests and some
+ * base compulsory functions for using data objects.
+ *
+ */
+// Need for data-operations and ajax
+
+ // Some custom modules to make developing faster
+
+
+
+window._ = lodash__WEBPACK_IMPORTED_MODULE_0___default.a;
+window.axios = axios__WEBPACK_IMPORTED_MODULE_1___default.a;
+window.QueryMessage = _components_base_QueryMessage__WEBPACK_IMPORTED_MODULE_3__["default"];
+window.Form = _utilities_Form__WEBPACK_IMPORTED_MODULE_2__["default"]; // Set token in header for axios to keep requests secure
+
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 var token = document.head.querySelector('meta[name="csrf-token"]');
 
@@ -31853,20 +31876,9 @@ if (token) {
   window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
 } else {
   console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
-}
-/**
- * Import custom utilities
- */
+} // Add open and close functionality on burger-nav
 
 
-
-window.Form = _utilities_Form__WEBPACK_IMPORTED_MODULE_0__["default"];
-/**
- * Import base components
- */
-
-
-window.QueryMessage = _components_base_QueryMessage__WEBPACK_IMPORTED_MODULE_1__["default"];
 document.addEventListener('DOMContentLoaded', function () {
   var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
