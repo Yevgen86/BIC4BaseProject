@@ -5,10 +5,9 @@
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">
-                    Development
+                    Development Exotische Tiere
                 </h1>
             </div>
         </div>
     </section>
-
 @endsection
