@@ -63,14 +63,14 @@
 
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
-                            Schauspieler
+                            Übersetzungen
                         </a>
 
                         <div class="navbar-dropdown">
-                            <a class="navbar-item" href="{{ route('actors') }}">
+                            <a class="navbar-item" href="{{ route('translations') }}">
                                 Liste
                             </a>
-                            <a class="navbar-item" href="{{ route('actors.create') }}">
+                            <a class="navbar-item" href="{{ route('translations.create') }}">
                                 Erstellen
                             </a>
                         </div>
@@ -78,14 +78,14 @@
 
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
-                            Filme
+                            Begriffe
                         </a>
 
                         <div class="navbar-dropdown">
-                            <a class="navbar-item" href="{{ route('movies') }}">
+                            <a class="navbar-item" href="{{ route('definitions') }}">
                                 Liste
                             </a>
-                            <a class="navbar-item" href="{{ route('movies.create') }}">
+                            <a class="navbar-item" href="{{ route('definitions.create') }}">
                                 Erstellen
                             </a>
                         </div>

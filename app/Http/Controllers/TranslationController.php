@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Movie;
+use App\Translation;
 use Illuminate\Http\Request;
 
-class MovieController extends Controller
+class TranslationController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,9 +24,9 @@ class MovieController extends Controller
      */
     public function index()
     {
-        $movie = Movie::all();
+        $translation = Translation::all();
 
-        return view('movies.index', compact('movie'));
+        return view('translations.index', compact('translation'));
     }
 
     /**
@@ -36,7 +36,7 @@ class MovieController extends Controller
      */
     public function create()
     {
-        return view('movies.create');
+        return view('translations.create');
     }
 
     /**
@@ -53,36 +53,33 @@ class MovieController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Movie  $movie
+     * @param  \App\Translation  $translation
      * @return \Illuminate\Http\Response
      */
-    public function show(Movie $movie)
+    public function show(Translation $translation)
     {
-        $movie = Movie::findOrFail($movie);
-
-        return view('movies.show', compact('movie'));
+        return view('translations.show', compact('translation'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Movie  $movie
+     * @param  \App\Translation  $translation
      * @return \Illuminate\Http\Response
      */
-    public function edit(Movie $movie)
+    public function edit(Translation $translation)
     {
-        return view('movies.edit', compact('movie'));
-
+        return view('translations.edit', compact($translation));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Movie  $movie
+     * @param  \App\Translation  $translation
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Movie $movie)
+    public function update(Request $request, Translation $translation)
     {
         //
     }
@@ -90,10 +87,10 @@ class MovieController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Movie  $movie
+     * @param  \App\Translation  $translation
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Movie $movie)
+    public function destroy(Translation $translation)
     {
         //
     }

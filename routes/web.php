@@ -19,12 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/actors', 'ActorController@index')->name('actors');
-Route::get('/actors/create', 'ActorController@create')->name('actors.create');
-Route::get('/actors/{actor}', 'ActorController@show')->name('actors.show');
-Route::get('/actors/{actor}/edit', 'ActorController@edit')->name('actors.edit');
+Route::get('/translations', 'TranslationController@index')->name('translations');
+Route::get('/translations/create', 'TranslationController@create')->name('translations.create');
+Route::get('/translations/{translation}', 'TranslationController@show')->name('translations.show');
+Route::get('/translations/{translation}/edit', 'TranslationController@edit')->name('translations.edit');
 
-Route::get('/movies', 'MovieController@index')->name('movies');
-Route::get('/movies/create', 'MovieController@create')->name('movies.create');
-Route::get('/movies/{movie}', 'MovieController@show')->name('movies.show');
-Route::get('/movies/{movie}/edit', 'MovieController@edit')->name('movies.edit');
+Route::get('/definitions', 'DefinitionController@index')->name('definitions');
+Route::get('/definitions/create', 'DefinitionController@create')->name('definitions.create');
+Route::get('/definitions/{definition}', 'DefinitionController@show')->name('definitions.show');
+Route::get('/definitions/{definition}/edit', 'DefinitionController@edit')->name('definitions.edit');

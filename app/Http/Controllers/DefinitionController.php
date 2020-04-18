@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Actor;
+use App\Definition;
 use Illuminate\Http\Request;
 
-class ActorController extends Controller
+class DefinitionController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,9 +24,9 @@ class ActorController extends Controller
      */
     public function index()
     {
-        $actor = Actor::all();
+        $definition = Definition::all();
 
-        return view('actors.index', compact('actor'));
+        return view('definitions.index', compact('definition'));
     }
 
     /**
@@ -36,7 +36,7 @@ class ActorController extends Controller
      */
     public function create()
     {
-        return view('actors.create');
+        return view('definitions.create');
     }
 
     /**
@@ -53,33 +53,36 @@ class ActorController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Actor  $actor
+     * @param  \App\Definition  $definition
      * @return \Illuminate\Http\Response
      */
-    public function show(Actor $actor)
+    public function show(Definition $definition)
     {
-        return view('actors.show', compact('actor'));
+        $definition = Definition::findOrFail($definition);
+
+        return view('definitions.show', compact('definition'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Actor  $actor
+     * @param  \App\Definition  $definition
      * @return \Illuminate\Http\Response
      */
-    public function edit(Actor $actor)
+    public function edit(Definition $definition)
     {
-        return view('actors.edit', compact($actor));
+        return view('definitions.edit', compact('definition'));
+
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Actor  $actor
+     * @param  \App\Definition  $definition
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Actor $actor)
+    public function update(Request $request, Definition $definition)
     {
         //
     }
@@ -87,10 +90,10 @@ class ActorController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Actor  $actor
+     * @param  \App\Definition  $definition
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Actor $actor)
+    public function destroy(Definition $definition)
     {
         //
     }
