@@ -5,7 +5,7 @@
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">
-                    Development Peruanische Rezepte
+                    Development skurrile Erfindungen
                 </h1>
             </div>
         </div>

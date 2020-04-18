@@ -19,12 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/ingredients', 'IngredientController@index')->name('ingredients');
-Route::get('/ingredients/create', 'IngredientController@create')->name('ingredients.create');
-Route::get('/ingredients/{ingredient}', 'IngredientController@show')->name('ingredients.show');
-Route::get('/ingredients/{ingredient}/edit', 'IngredientController@edit')->name('ingredients.edit');
+Route::get('/inventions', 'InventionController@index')->name('inventions');
+Route::get('/inventions/create', 'InventionController@create')->name('inventions.create');
+Route::get('/inventions/{invention}', 'InventionController@show')->name('inventions.show');
+Route::get('/inventions/{invention}/edit', 'InventionController@edit')->name('inventions.edit');
 
-Route::get('/recipes', 'RecipeController@index')->name('recipes');
-Route::get('/recipes/create', 'RecipeController@create')->name('recipes.create');
-Route::get('/recipes/{recipe}', 'RecipeController@show')->name('recipes.show');
-Route::get('/recipes/{recipe}/edit', 'RecipeController@edit')->name('recipes.edit');
+Route::get('/domains', 'DomainController@index')->name('domains');
+Route::get('/domains/create', 'DomainController@create')->name('domains.create');
+Route::get('/domains/{domain}', 'DomainController@show')->name('domains.show');
+Route::get('/domains/{domain}/edit', 'DomainController@edit')->name('domains.edit');

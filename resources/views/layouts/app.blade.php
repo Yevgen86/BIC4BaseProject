@@ -63,14 +63,14 @@
 
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
-                            Zutaten
+                            Erfindungen
                         </a>
 
                         <div class="navbar-dropdown">
-                            <a class="navbar-item" href="{{ route('ingredients') }}">
+                            <a class="navbar-item" href="{{ route('inventions') }}">
                                 Liste
                             </a>
-                            <a class="navbar-item" href="{{ route('ingredients.create') }}">
+                            <a class="navbar-item" href="{{ route('inventions.create') }}">
                                 Erstellen
                             </a>
                         </div>
@@ -78,14 +78,14 @@
 
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
-                            Rezepte
+                            Gebiete
                         </a>
 
                         <div class="navbar-dropdown">
-                            <a class="navbar-item" href="{{ route('recipes') }}">
+                            <a class="navbar-item" href="{{ route('domains') }}">
                                 Liste
                             </a>
-                            <a class="navbar-item" href="{{ route('recipes.create') }}">
+                            <a class="navbar-item" href="{{ route('domains.create') }}">
                                 Erstellen
                             </a>
                         </div>

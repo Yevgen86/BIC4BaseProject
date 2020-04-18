@@ -4,12 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Recipe extends Model
+class Invention extends Model
 {
     protected $guarded = ['id'];
 
-    public function ingredient()
+    public function domain()
     {
-        return $this->hasMany(Ingredient::class);
+        return $this->belongsTo(Domain::class);
     }
 }

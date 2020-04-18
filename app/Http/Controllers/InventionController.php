@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Recipe;
+use App\Invention;
 use Illuminate\Http\Request;
 
-class RecipeController extends Controller
+class InventionController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,9 +24,9 @@ class RecipeController extends Controller
      */
     public function index()
     {
-        $recipe = Recipe::all();
+        $invention = Invention::all();
 
-        return view('recipes.index', compact('recipe'));
+        return view('inventions.index', compact('invention'));
     }
 
     /**
@@ -36,7 +36,7 @@ class RecipeController extends Controller
      */
     public function create()
     {
-        return view('recipes.create');
+        return view('inventions.create');
     }
 
     /**
@@ -53,36 +53,33 @@ class RecipeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Recipe  $recipe
+     * @param  \App\Invention  $invention
      * @return \Illuminate\Http\Response
      */
-    public function show(Recipe $recipe)
+    public function show(Invention $invention)
     {
-        $recipe = Recipe::findOrFail($recipe);
-
-        return view('recipes.show', compact('recipe'));
+        return view('inventions.show', compact('invention'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Recipe  $recipe
+     * @param  \App\Invention  $invention
      * @return \Illuminate\Http\Response
      */
-    public function edit(Recipe $recipe)
+    public function edit(Invention $invention)
     {
-        return view('recipes.edit', compact('recipe'));
-
+        return view('inventions.edit', compact($invention));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Recipe  $recipe
+     * @param  \App\Invention  $invention
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Recipe $recipe)
+    public function update(Request $request, Invention $invention)
     {
         //
     }
@@ -90,10 +87,10 @@ class RecipeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Recipe  $recipe
+     * @param  \App\Invention  $invention
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Recipe $recipe)
+    public function destroy(Invention $invention)
     {
         //
     }

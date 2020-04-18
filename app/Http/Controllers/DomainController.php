@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Ingredient;
+use App\Domain;
 use Illuminate\Http\Request;
 
-class IngredientController extends Controller
+class DomainController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,9 +24,9 @@ class IngredientController extends Controller
      */
     public function index()
     {
-        $ingredient = Ingredient::all();
+        $domain = Domain::all();
 
-        return view('ingredients.index', compact('ingredient'));
+        return view('domains.index', compact('domain'));
     }
 
     /**
@@ -36,7 +36,7 @@ class IngredientController extends Controller
      */
     public function create()
     {
-        return view('ingredients.create');
+        return view('domains.create');
     }
 
     /**
@@ -53,33 +53,36 @@ class IngredientController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Ingredient  $ingredient
+     * @param  \App\Domain  $domain
      * @return \Illuminate\Http\Response
      */
-    public function show(Ingredient $ingredient)
+    public function show(Domain $domain)
     {
-        return view('ingredients.show', compact('ingredient'));
+        $domain = Domain::findOrFail($domain);
+
+        return view('domains.show', compact('domain'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Ingredient  $ingredient
+     * @param  \App\Domain  $domain
      * @return \Illuminate\Http\Response
      */
-    public function edit(Ingredient $ingredient)
+    public function edit(Domain $domain)
     {
-        return view('ingredients.edit', compact($ingredient));
+        return view('domains.edit', compact('domain'));
+
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Ingredient  $ingredient
+     * @param  \App\Domain  $domain
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Ingredient $ingredient)
+    public function update(Request $request, Domain $domain)
     {
         //
     }
@@ -87,10 +90,10 @@ class IngredientController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Ingredient  $ingredient
+     * @param  \App\Domain  $domain
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Ingredient $ingredient)
+    public function destroy(Domain $domain)
     {
         //
     }
