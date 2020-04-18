@@ -19,12 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/spells', 'SpellController@index')->name('spells');
-Route::get('/spells/create', 'SpellController@create')->name('spells.create');
-Route::get('/spells/{spell}', 'SpellController@show')->name('spells.show');
-Route::get('/spells/{spell}/edit', 'SpellController@edit')->name('spells.edit');
+Route::get('/actors', 'ActorController@index')->name('actors');
+Route::get('/actors/create', 'ActorController@create')->name('actors.create');
+Route::get('/actors/{actor}', 'ActorController@show')->name('actors.show');
+Route::get('/actors/{actor}/edit', 'ActorController@edit')->name('actors.edit');
 
-Route::get('/kinds', 'KindController@index')->name('kinds');
-Route::get('/kinds/create', 'KindController@create')->name('kinds.create');
-Route::get('/kinds/{kind}', 'KindController@show')->name('kinds.show');
-Route::get('/kinds/{kind}/edit', 'KindController@edit')->name('kinds.edit');
+Route::get('/movies', 'MovieController@index')->name('movies');
+Route::get('/movies/create', 'MovieController@create')->name('movies.create');
+Route::get('/movies/{movie}', 'MovieController@show')->name('movies.show');
+Route::get('/movies/{movie}/edit', 'MovieController@edit')->name('movies.edit');

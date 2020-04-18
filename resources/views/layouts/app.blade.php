@@ -63,14 +63,14 @@
 
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
-                            Zauber
+                            Schauspieler
                         </a>
 
                         <div class="navbar-dropdown">
-                            <a class="navbar-item" href="{{ route('spells') }}">
+                            <a class="navbar-item" href="{{ route('actors') }}">
                                 Liste
                             </a>
-                            <a class="navbar-item" href="{{ route('spells.create') }}">
+                            <a class="navbar-item" href="{{ route('actors.create') }}">
                                 Erstellen
                             </a>
                         </div>
@@ -78,14 +78,14 @@
 
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
-                            Arten
+                            Filme
                         </a>
 
                         <div class="navbar-dropdown">
-                            <a class="navbar-item" href="{{ route('kinds') }}">
+                            <a class="navbar-item" href="{{ route('movies') }}">
                                 Liste
                             </a>
-                            <a class="navbar-item" href="{{ route('kinds.create') }}">
+                            <a class="navbar-item" href="{{ route('movies.create') }}">
                                 Erstellen
                             </a>
                         </div>

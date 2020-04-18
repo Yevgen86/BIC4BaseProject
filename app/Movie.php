@@ -4,12 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Kind extends Model
+class Movie extends Model
 {
     protected $guarded = ['id'];
 
-    public function spell()
+    public function actor()
     {
-        return $this->hasMany(Spell::class);
+        return $this->hasMany(Actor::class);
     }
 }

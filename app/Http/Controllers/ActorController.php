@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Kind;
+use App\Actor;
 use Illuminate\Http\Request;
 
-class KindController extends Controller
+class ActorController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,9 +24,9 @@ class KindController extends Controller
      */
     public function index()
     {
-        $kind = Kind::all();
+        $actor = Actor::all();
 
-        return view('kinds.index', compact('kind'));
+        return view('actors.index', compact('actor'));
     }
 
     /**
@@ -36,7 +36,7 @@ class KindController extends Controller
      */
     public function create()
     {
-        return view('kinds.create');
+        return view('actors.create');
     }
 
     /**
@@ -53,36 +53,33 @@ class KindController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Kind  $kind
+     * @param  \App\Actor  $actor
      * @return \Illuminate\Http\Response
      */
-    public function show(Kind $kind)
+    public function show(Actor $actor)
     {
-        $kind = Kind::findOrFail($kind);
-
-        return view('kinds.show', compact('kind'));
+        return view('actors.show', compact('actor'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Kind  $kind
+     * @param  \App\Actor  $actor
      * @return \Illuminate\Http\Response
      */
-    public function edit(Kind $kind)
+    public function edit(Actor $actor)
     {
-        return view('kinds.edit', compact('kind'));
-
+        return view('actors.edit', compact($actor));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Kind  $kind
+     * @param  \App\Actor  $actor
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Kind $kind)
+    public function update(Request $request, Actor $actor)
     {
         //
     }
@@ -90,10 +87,10 @@ class KindController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Kind  $kind
+     * @param  \App\Actor  $actor
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Kind $kind)
+    public function destroy(Actor $actor)
     {
         //
     }

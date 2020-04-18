@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Spell;
+use App\Movie;
 use Illuminate\Http\Request;
 
-class SpellController extends Controller
+class MovieController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,9 +24,9 @@ class SpellController extends Controller
      */
     public function index()
     {
-        $spell = Spell::all();
+        $movie = Movie::all();
 
-        return view('spells.index', compact('spell'));
+        return view('movies.index', compact('movie'));
     }
 
     /**
@@ -36,7 +36,7 @@ class SpellController extends Controller
      */
     public function create()
     {
-        return view('spells.create');
+        return view('movies.create');
     }
 
     /**
@@ -53,33 +53,36 @@ class SpellController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Spell  $spell
+     * @param  \App\Movie  $movie
      * @return \Illuminate\Http\Response
      */
-    public function show(Spell $spell)
+    public function show(Movie $movie)
     {
-        return view('spells.show', compact('spell'));
+        $movie = Movie::findOrFail($movie);
+
+        return view('movies.show', compact('movie'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Spell  $spell
+     * @param  \App\Movie  $movie
      * @return \Illuminate\Http\Response
      */
-    public function edit(Spell $spell)
+    public function edit(Movie $movie)
     {
-        return view('spells.edit', compact($spell));
+        return view('movies.edit', compact('movie'));
+
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Spell  $spell
+     * @param  \App\Movie  $movie
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Spell $spell)
+    public function update(Request $request, Movie $movie)
     {
         //
     }
@@ -87,10 +90,10 @@ class SpellController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Spell  $spell
+     * @param  \App\Movie  $movie
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Spell $spell)
+    public function destroy(Movie $movie)
     {
         //
     }
