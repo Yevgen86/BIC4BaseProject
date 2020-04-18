@@ -4,12 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Animal extends Model
+class Recipe extends Model
 {
     protected $guarded = ['id'];
 
-    public function species()
+    public function ingredient()
     {
-        return $this->belongsTo(Species::class);
+        return $this->hasMany(Ingredient::class);
     }
 }

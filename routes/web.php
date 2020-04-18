@@ -19,12 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/animals', 'AnimalController@index')->name('animals');
-Route::get('/animals/create', 'AnimalController@create')->name('animals.create');
-Route::get('/animals/{animal}', 'AnimalController@show')->name('animals.show');
-Route::get('/animals/{animal}/edit', 'AnimalController@edit')->name('animals.edit');
+Route::get('/ingredients', 'IngredientController@index')->name('ingredients');
+Route::get('/ingredients/create', 'IngredientController@create')->name('ingredients.create');
+Route::get('/ingredients/{ingredient}', 'IngredientController@show')->name('ingredients.show');
+Route::get('/ingredients/{ingredient}/edit', 'IngredientController@edit')->name('ingredients.edit');
 
-Route::get('/species', 'SpeciesController@index')->name('species');
-Route::get('/species/create', 'SpeciesController@create')->name('species.create');
-Route::get('/species/{species}', 'SpeciesController@show')->name('species.show');
-Route::get('/species/{species}/edit', 'SpeciesController@edit')->name('species.edit');
+Route::get('/recipes', 'RecipeController@index')->name('recipes');
+Route::get('/recipes/create', 'RecipeController@create')->name('recipes.create');
+Route::get('/recipes/{recipe}', 'RecipeController@show')->name('recipes.show');
+Route::get('/recipes/{recipe}/edit', 'RecipeController@edit')->name('recipes.edit');

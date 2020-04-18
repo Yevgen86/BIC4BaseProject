@@ -63,14 +63,14 @@
 
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
-                            Tiere
+                            Zutaten
                         </a>
 
                         <div class="navbar-dropdown">
-                            <a class="navbar-item" href="{{ route('animals') }}">
+                            <a class="navbar-item" href="{{ route('ingredients') }}">
                                 Liste
                             </a>
-                            <a class="navbar-item" href="{{ route('animals.create') }}">
+                            <a class="navbar-item" href="{{ route('ingredients.create') }}">
                                 Erstellen
                             </a>
                         </div>
@@ -78,14 +78,14 @@
 
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
-                            Gattungen
+                            Rezepte
                         </a>
 
                         <div class="navbar-dropdown">
-                            <a class="navbar-item" href="{{ route('species') }}">
+                            <a class="navbar-item" href="{{ route('recipes') }}">
                                 Liste
                             </a>
-                            <a class="navbar-item" href="{{ route('species.create') }}">
+                            <a class="navbar-item" href="{{ route('recipes.create') }}">
                                 Erstellen
                             </a>
                         </div>

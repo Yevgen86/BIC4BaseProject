@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Species;
+use App\Ingredient;
 use Illuminate\Http\Request;
 
-class SpeciesController extends Controller
+class IngredientController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,9 +24,9 @@ class SpeciesController extends Controller
      */
     public function index()
     {
-        $species = Species::all();
+        $ingredient = Ingredient::all();
 
-        return view('species.index', compact('species'));
+        return view('ingredients.index', compact('ingredient'));
     }
 
     /**
@@ -36,7 +36,7 @@ class SpeciesController extends Controller
      */
     public function create()
     {
-        return view('species.create');
+        return view('ingredients.create');
     }
 
     /**
@@ -53,36 +53,33 @@ class SpeciesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Species  $species
+     * @param  \App\Ingredient  $ingredient
      * @return \Illuminate\Http\Response
      */
-    public function show(Species $species)
+    public function show(Ingredient $ingredient)
     {
-        $species = Species::findOrFail($species);
-
-        return view('species.show', compact('species'));
+        return view('ingredients.show', compact('ingredient'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Species  $species
+     * @param  \App\Ingredient  $ingredient
      * @return \Illuminate\Http\Response
      */
-    public function edit(Species $species)
+    public function edit(Ingredient $ingredient)
     {
-        return view('species.edit', compact('species'));
-
+        return view('ingredients.edit', compact($ingredient));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Species  $species
+     * @param  \App\Ingredient  $ingredient
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Species $species)
+    public function update(Request $request, Ingredient $ingredient)
     {
         //
     }
@@ -90,10 +87,10 @@ class SpeciesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Species  $species
+     * @param  \App\Ingredient  $ingredient
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Species $species)
+    public function destroy(Ingredient $ingredient)
     {
         //
     }

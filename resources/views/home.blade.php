@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="section">
+    <section class="section is-fullheight">
         <div class="container">
             <div class="columns is-multiline">
                 <div class="card column is-half is-offset-one-quarter">
@@ -19,19 +19,11 @@
                                     </div>
                                 </article>
                             @endif
-                            <p>Welcome <strong>{{ auth()->user()->name }}</strong></p>
+                            <p>Willkommen <strong>{{ auth()->user()->name }}</strong></p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-
-            <example-component></example-component>
-
         </div>
     </section>
 @endsection

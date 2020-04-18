@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Animal;
+use App\Recipe;
 use Illuminate\Http\Request;
 
-class AnimalController extends Controller
+class RecipeController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,9 +24,9 @@ class AnimalController extends Controller
      */
     public function index()
     {
-        $animal = Animal::all();
+        $recipe = Recipe::all();
 
-        return view('animals.index', compact('animal'));
+        return view('recipes.index', compact('recipe'));
     }
 
     /**
@@ -36,7 +36,7 @@ class AnimalController extends Controller
      */
     public function create()
     {
-        return view('animals.create');
+        return view('recipes.create');
     }
 
     /**
@@ -53,33 +53,36 @@ class AnimalController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Animal  $animal
+     * @param  \App\Recipe  $recipe
      * @return \Illuminate\Http\Response
      */
-    public function show(Animal $animal)
+    public function show(Recipe $recipe)
     {
-        return view('animals.show', compact('animal'));
+        $recipe = Recipe::findOrFail($recipe);
+
+        return view('recipes.show', compact('recipe'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Animal  $animal
+     * @param  \App\Recipe  $recipe
      * @return \Illuminate\Http\Response
      */
-    public function edit(Animal $animal)
+    public function edit(Recipe $recipe)
     {
-        return view('animals.edit', compact($animal));
+        return view('recipes.edit', compact('recipe'));
+
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Animal  $animal
+     * @param  \App\Recipe  $recipe
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Animal $animal)
+    public function update(Request $request, Recipe $recipe)
     {
         //
     }
@@ -87,10 +90,10 @@ class AnimalController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Animal  $animal
+     * @param  \App\Recipe  $recipe
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Animal $animal)
+    public function destroy(Recipe $recipe)
     {
         //
     }
