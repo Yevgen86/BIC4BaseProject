@@ -37,19 +37,6 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <script>
-        window.Laravel = {!!
-        json_encode([
-            'csrfToken'=> csrf_token(),
-            'quote' => \Illuminate\Foundation\Inspiring::quote(),
-            'user'=> [
-                'authenticated' => auth()->check(),
-                'id' => auth()->check() ? auth()->user()->id : null,
-                'name' => auth()->check() ? auth()->user()->name : null,
-                ]
-            ])
-        !!};
-    </script>
 </head>
 <body>
 <div id="app">
@@ -85,28 +72,6 @@
                             </a>
                             <a class="navbar-item">
                                 Create
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">
-                            Fields
-                        </a>
-
-                        <div class="navbar-dropdown">
-                            <a class="navbar-item">
-                                List
-                            </a>
-                            <a class="navbar-item">
-                                Create
-                            </a>
-                            <hr class="navbar-divider">
-                            <a class="navbar-item" href="{{ route('type.index') }}">
-                                List types
-                            </a>
-                            <a class="navbar-item" href="{{ route('type.create') }}">
-                                Create type
                             </a>
                         </div>
                     </div>

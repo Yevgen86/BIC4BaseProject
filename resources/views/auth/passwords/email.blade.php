@@ -4,27 +4,27 @@
     <section class="section is-fullheight">
         <div class="container">
             <div class="columns is-multiline">
-                <div class="card card column is-half is-offset-one-quarter">
+                <div class="card custom-card column is-half is-offset-one-quarter">
                     <header class="card-header">
-                        <p class="card-header-title">
-                            {{ __('Reset Password') }}
-                        </p>
+                        <h1 class="card-header-title is-centered">{{ __('Reset Password') }}</h1>
                     </header>
                     <div class="card-content">
-                        @if (session('status'))
-                            <article class="message is-success">
-                                <div class="message-body">
-                                    {{ session('status') }}
-                                </div>
-                            </article>
-                        @endif
                         <div class="content">
-                            <form method="POST" action="{{ route('password.email') }}" id="forgot-password">
+                            @if (session('status'))
+                                <article class="message is-success">
+                                    <div class="message-body">
+                                        {{ session('status') }}
+                                    </div>
+                                </article>
+                            @endif
+
+                            <form method="POST" action="{{ route('password.email') }}">
                                 @csrf
                                 <div class="field">
-                                    <label class="label">{{ __('E-Mail Address') }}</label>
+                                    <label class="label" for="email">{{ __('E-Mail Address') }}</label>
                                     <div class="control">
-                                        <input name="email" class="input @error('email') is-danger @enderror"
+                                        <input name="email" id="email"
+                                               class="input @error('email') is-danger @enderror"
                                                type="email"
                                                value="{{ old('email') }}" autocomplete="email" autofocus>
                                     </div>
@@ -32,14 +32,12 @@
                                     <p class="help is-danger">{{ $message }}</p>
                                     @enderror
                                 </div>
+                                <button type="submit" class="button is-large is-primary is-outlined is-fullwidth">
+                                    {{ __('Send Password Reset Link') }}
+                                </button>
                             </form>
                         </div>
                     </div>
-                    <footer class="card-footer">
-                        <a href="#" class="button is-primary" onclick="event.preventDefault();
-                                                     document.getElementById('forgot-password').submit();">
-                            {{ __('Send Password Reset Link') }}</a>
-                    </footer>
                 </div>
             </div>
         </div>
