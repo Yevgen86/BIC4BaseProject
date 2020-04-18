@@ -63,14 +63,14 @@
 
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
-                            Zutaten
+                            Zauber
                         </a>
 
                         <div class="navbar-dropdown">
-                            <a class="navbar-item" href="{{ route('ingredients') }}">
+                            <a class="navbar-item" href="{{ route('spells') }}">
                                 Liste
                             </a>
-                            <a class="navbar-item" href="{{ route('ingredients.create') }}">
+                            <a class="navbar-item" href="{{ route('spells.create') }}">
                                 Erstellen
                             </a>
                         </div>
@@ -78,14 +78,14 @@
 
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
-                            Rezepte
+                            Arten
                         </a>
 
                         <div class="navbar-dropdown">
-                            <a class="navbar-item" href="{{ route('recipes') }}">
+                            <a class="navbar-item" href="{{ route('kinds') }}">
                                 Liste
                             </a>
-                            <a class="navbar-item" href="{{ route('recipes.create') }}">
+                            <a class="navbar-item" href="{{ route('kinds.create') }}">
                                 Erstellen
                             </a>
                         </div>

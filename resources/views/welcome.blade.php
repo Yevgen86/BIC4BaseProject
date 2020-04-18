@@ -5,7 +5,7 @@
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">
-                    Development Peruanische Rezepte
+                    Development Magic Almanac
                 </h1>
             </div>
         </div>

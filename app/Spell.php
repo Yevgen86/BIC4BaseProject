@@ -4,12 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Ingredient extends Model
+
+class Spell extends Model
 {
     protected $guarded = ['id'];
 
-    public function recipe()
+    public function kind()
     {
-        return $this->belongsTo(Recipe::class);
+        return $this->belongsTo(Kind::class);
     }
 }

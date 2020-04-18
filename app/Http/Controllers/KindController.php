@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Recipe;
+use App\Kind;
 use Illuminate\Http\Request;
 
-class RecipeController extends Controller
+class KindController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,9 +24,9 @@ class RecipeController extends Controller
      */
     public function index()
     {
-        $recipe = Recipe::all();
+        $kind = Kind::all();
 
-        return view('recipes.index', compact('recipe'));
+        return view('kinds.index', compact('kind'));
     }
 
     /**
@@ -36,7 +36,7 @@ class RecipeController extends Controller
      */
     public function create()
     {
-        return view('recipes.create');
+        return view('kinds.create');
     }
 
     /**
@@ -53,25 +53,25 @@ class RecipeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Recipe  $recipe
+     * @param  \App\Kind  $kind
      * @return \Illuminate\Http\Response
      */
-    public function show(Recipe $recipe)
+    public function show(Kind $kind)
     {
-        $recipe = Recipe::findOrFail($recipe);
+        $kind = Kind::findOrFail($kind);
 
-        return view('recipes.show', compact('recipe'));
+        return view('kinds.show', compact('kind'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Recipe  $recipe
+     * @param  \App\Kind  $kind
      * @return \Illuminate\Http\Response
      */
-    public function edit(Recipe $recipe)
+    public function edit(Kind $kind)
     {
-        return view('recipes.edit', compact('recipe'));
+        return view('kinds.edit', compact('kind'));
 
     }
 
@@ -79,10 +79,10 @@ class RecipeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Recipe  $recipe
+     * @param  \App\Kind  $kind
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Recipe $recipe)
+    public function update(Request $request, Kind $kind)
     {
         //
     }
@@ -90,10 +90,10 @@ class RecipeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Recipe  $recipe
+     * @param  \App\Kind  $kind
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Recipe $recipe)
+    public function destroy(Kind $kind)
     {
         //
     }

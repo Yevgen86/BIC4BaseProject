@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Ingredient;
+use App\Spell;
 use Illuminate\Http\Request;
 
-class IngredientController extends Controller
+class SpellController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,9 +24,9 @@ class IngredientController extends Controller
      */
     public function index()
     {
-        $ingredient = Ingredient::all();
+        $spell = Spell::all();
 
-        return view('ingredients.index', compact('ingredient'));
+        return view('spells.index', compact('spell'));
     }
 
     /**
@@ -36,7 +36,7 @@ class IngredientController extends Controller
      */
     public function create()
     {
-        return view('ingredients.create');
+        return view('spells.create');
     }
 
     /**
@@ -53,33 +53,33 @@ class IngredientController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Ingredient  $ingredient
+     * @param  \App\Spell  $spell
      * @return \Illuminate\Http\Response
      */
-    public function show(Ingredient $ingredient)
+    public function show(Spell $spell)
     {
-        return view('ingredients.show', compact('ingredient'));
+        return view('spells.show', compact('spell'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Ingredient  $ingredient
+     * @param  \App\Spell  $spell
      * @return \Illuminate\Http\Response
      */
-    public function edit(Ingredient $ingredient)
+    public function edit(Spell $spell)
     {
-        return view('ingredients.edit', compact($ingredient));
+        return view('spells.edit', compact($spell));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Ingredient  $ingredient
+     * @param  \App\Spell  $spell
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Ingredient $ingredient)
+    public function update(Request $request, Spell $spell)
     {
         //
     }
@@ -87,10 +87,10 @@ class IngredientController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Ingredient  $ingredient
+     * @param  \App\Spell  $spell
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Ingredient $ingredient)
+    public function destroy(Spell $spell)
     {
         //
     }

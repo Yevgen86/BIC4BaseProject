@@ -19,12 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/ingredients', 'IngredientController@index')->name('ingredients');
-Route::get('/ingredients/create', 'IngredientController@create')->name('ingredients.create');
-Route::get('/ingredients/{ingredient}', 'IngredientController@show')->name('ingredients.show');
-Route::get('/ingredients/{ingredient}/edit', 'IngredientController@edit')->name('ingredients.edit');
+Route::get('/spells', 'SpellController@index')->name('spells');
+Route::get('/spells/create', 'SpellController@create')->name('spells.create');
+Route::get('/spells/{spell}', 'SpellController@show')->name('spells.show');
+Route::get('/spells/{spell}/edit', 'SpellController@edit')->name('spells.edit');
 
-Route::get('/recipes', 'RecipeController@index')->name('recipes');
-Route::get('/recipes/create', 'RecipeController@create')->name('recipes.create');
-Route::get('/recipes/{recipe}', 'RecipeController@show')->name('recipes.show');
-Route::get('/recipes/{recipe}/edit', 'RecipeController@edit')->name('recipes.edit');
+Route::get('/kinds', 'KindController@index')->name('kinds');
+Route::get('/kinds/create', 'KindController@create')->name('kinds.create');
+Route::get('/kinds/{kind}', 'KindController@show')->name('kinds.show');
+Route::get('/kinds/{kind}/edit', 'KindController@edit')->name('kinds.edit');
