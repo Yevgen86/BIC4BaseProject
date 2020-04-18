@@ -1,13 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="section is-fullheight">
+    <section class="section">
         <div class="container">
-
-            <example-component></example-component>
-
             <div class="columns is-multiline">
-                <div class="card card column is-half is-offset-one-quarter">
+                <div class="card column is-half is-offset-one-quarter">
                     <header class="card-header">
                         <p class="card-header-title">
                             Dashboard
@@ -27,6 +24,14 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+
+            <example-component></example-component>
+
         </div>
     </section>
 @endsection
