@@ -7,6 +7,9 @@
                 <h1 class="title">
                     Development skurrile Erfindungen
                 </h1>
+                <h2 class="subtitle">
+                    This is a sample how you can create a simple web application
+                </h2>
             </div>
         </div>
     </section>
