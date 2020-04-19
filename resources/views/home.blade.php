@@ -19,7 +19,7 @@
                                     </div>
                                 </article>
                             @endif
-                            <p>Welcome <strong>{{ auth()->user()->name }}</strong></p>
+                            <p>Willkommen <strong>{{ auth()->user()->name }}</strong></p>
                         </div>
                     </div>
                 </div>

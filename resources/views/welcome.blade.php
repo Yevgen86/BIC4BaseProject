@@ -5,7 +5,7 @@
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">
-                    Development
+                    Development skurrile Erfindungen
                 </h1>
                 <h2 class="subtitle">
                     This is a sample how you can create a simple web application
@@ -13,5 +13,4 @@
             </div>
         </div>
     </section>
-
 @endsection
