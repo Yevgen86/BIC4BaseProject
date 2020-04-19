@@ -19,7 +19,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
@@ -37,19 +37,6 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <script>
-        window.Laravel = {!!
-        json_encode([
-            'csrfToken'=> csrf_token(),
-            'quote' => \Illuminate\Foundation\Inspiring::quote(),
-            'user'=> [
-                'authenticated' => auth()->check(),
-                'id' => auth()->check() ? auth()->user()->id : null,
-                'name' => auth()->check() ? auth()->user()->name : null,
-                ]
-            ])
-        !!};
-    </script>
 </head>
 <body>
 <div id="app">
@@ -88,60 +75,38 @@
                             </a>
                         </div>
                     </div>
-
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">
-                            Fields
-                        </a>
-
-                        <div class="navbar-dropdown">
-                            <a class="navbar-item">
-                                List
-                            </a>
-                            <a class="navbar-item">
-                                Create
-                            </a>
-                            <hr class="navbar-divider">
-                            <a class="navbar-item" href="{{ route('type.index') }}">
-                                List types
-                            </a>
-                            <a class="navbar-item" href="{{ route('type.create') }}">
-                                Create type
-                            </a>
-                        </div>
-                    </div>
                 </div>
             @endauth
 
             <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="buttons">
-                        @guest
+                @guest
+                    <div class="navbar-item">
+                        <div class="buttons">
                             <a class="button is-primary" href="{{ route('login') }}">{{ __('Login') }}</a>
                             @if (Route::has('register'))
                                 <a class="button is-light" href="{{ route('register') }}">{{ __('Register') }}</a>
                             @endif
-                        @else
-                            <div class="navbar-item has-dropdown is-hoverable">
-                                <a class="navbar-link">
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="navbar-dropdown">
-                                    <a class="navbar-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                          style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </div>
-                        @endguest
+                        </div>
                     </div>
-                </div>
+                @else
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            {{ Auth::user()->name }}
+                        </a>
+
+                        <div class="navbar-dropdown is-right">
+                            <a class="navbar-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                  style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+                    </div>
+                @endguest
             </div>
         </div>
     </nav>
@@ -152,9 +117,7 @@
 
     <footer class="footer">
         <div class="content has-text-centered">
-            <small>
-                &copy; Adnan Vatric
-            </small>
+            <small>&copy; FH Technikum Dominik Ertl, Adnan Vatric</small>
         </div>
     </footer>
 </div>
