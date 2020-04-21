@@ -19,11 +19,19 @@
                                     </div>
                                 </article>
                             @endif
-                            <p>Willkommen <strong>{{ auth()->user()->name }}</strong></p>
+                            <p>Welcome <strong>{{ auth()->user()->name }}</strong></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <example-component title="Dashboard">
+            @if (session('status'))
+                <query-message :success="true" :fail="false" message="{{ session('status') }}"></query-message>
+            @endif
+            <p>Welcome <strong>{{ auth()->user()->name }}</strong></p>
+        </example-component>
+
     </section>
 @endsection

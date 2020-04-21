@@ -1924,7 +1924,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['title'],
   mounted: function mounted() {
     console.log('Component mounted.');
   }
@@ -1941,6 +1945,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
 //
 //
 //
@@ -19572,32 +19578,27 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Example Component")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v(
-                "\n                    I'm an example component.\n                "
-              )
-            ])
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "columns is-multiline" }, [
+      _c("div", { staticClass: "card column is-half is-offset-one-quarter" }, [
+        _c("header", { staticClass: "card-header" }, [
+          _c("h1", { staticClass: "card-header-title" }, [
+            _vm._v(
+              "\n                    " +
+                _vm._s(_vm.title) +
+                "\n                "
+            )
           ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-content" }, [
+          _c("div", { staticClass: "content" }, [_vm._t("default")], 2)
         ])
       ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -19621,13 +19622,16 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _vm.show()
     ? _c(
-        "div",
+        "article",
         {
-          staticClass: "alert",
-          class: { "alert-success": _vm.success, "alert-danger": _vm.fail },
-          attrs: { role: "alert" }
+          staticClass: "message",
+          class: { "is-success": _vm.success, "is-danger": _vm.fail }
         },
-        [_vm._v("\n    " + _vm._s(_vm.message) + "\n")]
+        [
+          _c("div", { staticClass: "message-body" }, [
+            _vm._v("\n        " + _vm._s(_vm.message) + "\n    ")
+          ])
+        ]
       )
     : _vm._e()
 }
@@ -31826,6 +31830,7 @@ window.Vue = vue__WEBPACK_IMPORTED_MODULE_0___default.a;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
+Vue.component('query-message', __webpack_require__(/*! ./components/base/QueryMessage.vue */ "./resources/js/components/base/QueryMessage.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
