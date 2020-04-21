@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="section">
+    <section class="section is-fullheight">
         <div class="container">
             <div class="columns is-multiline">
                 <div class="card column is-half is-offset-one-quarter">
                     <header class="card-header">
-                        <p class="card-header-title">
+                        <h1 class="card-header-title">
                             Dashboard
-                        </p>
+                        </h1>
                     </header>
                     <div class="card-content">
                         <div class="content">
@@ -25,13 +25,13 @@
                 </div>
             </div>
         </div>
-    </section>
 
-    <section class="section">
-        <div class="container">
+        <example-component title="Dashboard">
+            @if (session('status'))
+                <query-message :success="true" :fail="false" message="{{ session('status') }}"></query-message>
+            @endif
+            <p>Welcome <strong>{{ auth()->user()->name }}</strong></p>
+        </example-component>
 
-            <example-component></example-component>
-
-        </div>
     </section>
 @endsection

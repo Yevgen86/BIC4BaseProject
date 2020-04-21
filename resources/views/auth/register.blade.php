@@ -4,21 +4,19 @@
     <section class="section is-fullheight">
         <div class="container">
             <div class="columns is-multiline">
-                <div class="card card column is-half is-offset-one-quarter">
+                <div class="card custom-card column is-half is-offset-one-quarter">
                     <header class="card-header">
-                        <p class="card-header-title">
-                            {{ __('Register') }}
-                        </p>
+                        <h1 class="card-header-title is-centered">{{ __('Register') }}</h1>
                     </header>
                     <div class="card-content">
                         <div class="content">
-                            <form method="POST" action="{{ route('register') }}" id="register">
+                            <form method="POST" action="{{ route('register') }}">
                                 @csrf
                                 <div class="field">
-                                    <label class="label">{{ __('Name') }}</label>
+                                    <label class="label" for="name">{{ __('Name') }}</label>
                                     <div class="control">
                                         <input name="name" class="input @error('name') is-danger @enderror"
-                                               type="text"
+                                               type="text" id="name"
                                                value="{{ old('name') }}" required autocomplete="name"
                                                autofocus>
                                     </div>
@@ -28,45 +26,44 @@
                                 </div>
 
                                 <div class="field">
-                                    <label class="label">{{ __('E-Mail Address') }}</label>
+                                    <label class="label" for="email">Email</label>
                                     <div class="control">
-                                        <input name="email" class="input @error('email') is-danger @enderror"
-                                               type="email"
-                                               value="{{ $email ?? old('email') }}" required autocomplete="email">
+                                        <input name="email" id="email" class="input @error('email') is-danger @enderror"
+                                               type="email" required>
                                     </div>
                                     @error('email')
-                                    <p class="help is-danger">{{ $message }}</p>
+                                    <p class="help is-danger">Email is not valid</p>
                                     @enderror
                                 </div>
 
                                 <div class="field">
-                                    <label class="label">{{ __('Password') }}</label>
+                                    <label class="label" for="password">Password</label>
                                     <div class="control">
-                                        <input name="password" class="input @error('password') is-danger @enderror"
+                                        <input name="password" id="password"
+                                               class="input @error('password') is-danger @enderror"
                                                type="password"
-                                               required autocomplete="password">
+                                               required>
                                     </div>
                                     @error('password')
-                                    <p class="help is-danger">{{ $message }}</p>
+                                    <p class="help is-danger">Password is not valid</p>
                                     @enderror
                                 </div>
 
                                 <div class="field">
-                                    <label class="label">{{ __('Confirm Password') }}</label>
+                                    <label class="label" for="password-confirm">Confirm Password</label>
                                     <div class="control">
-                                        <input class="input" type="password"
+                                        <input class="input field-spacer" type="password"
                                                id="password-confirm" name="password_confirmation"
-                                               required autocomplete="password">
+                                               required>
                                     </div>
                                 </div>
+
+                                <button type="submit" class="button is-large is-primary is-outlined is-fullwidth">
+                                    {{ __('Register') }}
+                                </button>
                             </form>
                         </div>
                     </div>
-                    <footer class="card-footer">
-                        <a href="#" class="button is-primary" onclick="event.preventDefault();
-                                                     document.getElementById('register').submit();">
-                            {{ __('Register') }}</a>
-                    </footer>
                 </div>
             </div>
         </div>

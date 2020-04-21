@@ -11721,19 +11721,6 @@ label.panel-block:hover {
   background: #F7F7F7;
 }
 
-.is-divider {
-  margin: 1rem 0;
-}
-
-.is-spacer {
-  margin: 1rem 0;
-}
-
-.is-vertical-center {
-  display: flex;
-  align-items: center;
-}
-
 .is-fullheight.columns {
   min-height: calc(100vh - 6.75rem);
 }
@@ -11753,62 +11740,19 @@ label.panel-block:hover {
   justify-content: center;
 }
 
-.card .card-header .card-header-title {
-  text-align: center;
+.custom-card {
+  padding: 0;
+  border-radius: 5px;
+}
+
+.custom-card header {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.custom-card .card-header .card-header-title {
   font-size: 1.2rem;
   font-weight: lighter;
-}
-
-.card .card-footer .button {
-  cursor: pointer;
-  font-size: 1.2rem;
-  color: #00d1b2;
-  border-radius: 4rem;
-  display: block;
-  width: 100%;
-  background: transparent;
-  border: 2px solid #00d1b2;
-  transition: color 0.5s, border-color 0.5s;
-  margin-top: 1.1rem;
-  margin-bottom: 0.5rem;
-  padding-bottom: 2.3rem;
-}
-
-.card .card-footer .button:hover,
-.card .card-footer .button:focus {
-  color: #009e86;
-  border-color: #009e86;
-}
-
-.card .card-footer .button:active {
-  transform: translateY(1px);
-}
-
-.chat-window {
-  height: 60vh;
-  overflow-y: auto;
-  padding-left: 1.1rem;
-  padding-right: 1.1rem;
-  margin-bottom: 0.6rem;
-}
-
-.chat-window-small {
-  height: 40vh;
-  overflow-y: auto;
-  padding-left: 1.1rem;
-  padding-right: 1.1rem;
-}
-
-.break-word {
-  word-break: break-all;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-}
-
-.grecaptcha-badge {
-  visibility: hidden;
 }
 
 .footer {
@@ -11817,136 +11761,5 @@ label.panel-block:hover {
 
 .hero.is-fullheight-with-navbar {
   min-height: calc(100vh - 6.75rem);
-}
-
-#login {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: calc(100vh - 6.75rem);
-}
-
-#login .login-card {
-  background: #fff;
-  width: 24rem;
-  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.11);
-}
-
-#login .login-card .card-title {
-  background-color: #00b89c;
-  padding: 2rem;
-}
-
-#login .login-card .card-title h1 {
-  color: #fff;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-#login .login-card .content {
-  padding: 2rem 2.5rem;
-}
-
-#login .login-card #email,
-#login .login-card #password {
-  display: block;
-  width: 100%;
-  font-size: 1rem;
-  margin-bottom: 1.75rem;
-  padding: 0.25rem 0;
-  border: none;
-  border-bottom: 1px solid #dbdbdb;
-  transition: all 0.5s;
-}
-
-#login .login-card #email:hover,
-#login .login-card #password:hover {
-  border-color: #7a7a7a;
-}
-
-#login .login-card #email:active,
-#login .login-card #email:focus,
-#login .login-card #password:active,
-#login .login-card #password:focus {
-  border-color: #00d1b2;
-}
-
-#login .login-card .checkbox {
-  color: #b5b5b5;
-  font-size: 0.8rem;
-}
-
-#login .login-card .checkbox span {
-  margin-left: 0.5rem;
-}
-
-#login .login-card a {
-  font-size: 0.8rem;
-}
-
-#login .login-card .options {
-  color: #b5b5b5;
-  margin-bottom: 1.5rem;
-}
-
-#login .login-card button {
-  cursor: pointer;
-  font-size: 1.2rem;
-  color: #00d1b2;
-  border-radius: 4rem;
-  display: block;
-  width: 100%;
-  background: transparent;
-  border: 2px solid #00d1b2;
-  padding: 0.9rem 0 1.1rem;
-  transition: color 0.5s, border-color 0.5s;
-}
-
-#login .login-card button:hover,
-#login .login-card button:focus {
-  color: #009e86;
-  border-color: #009e86;
-}
-
-#login .login-card button:active {
-  transform: translateY(1px);
-}
-
-label {
-  cursor: pointer;
-}
-
-.regular-checkbox {
-  display: none;
-}
-
-.regular-checkbox + label {
-  background-color: #fafafa;
-  border: 1px solid #dbdbdb;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  padding: 7px;
-  border-radius: 3px;
-  display: inline-block;
-  position: relative;
-}
-
-.regular-checkbox:checked + label {
-  background-color: #e9ecee;
-}
-
-.regular-checkbox:checked + label:after {
-  content: "\2714";
-  font-size: 11px;
-  position: absolute;
-  top: 0;
-  left: 3px;
-  color: #b5b5b5;
-}
-
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-  outline: none;
 }
 

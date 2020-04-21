@@ -4,24 +4,22 @@
     <section class="section is-fullheight">
         <div class="container">
             <div class="columns is-multiline">
-                <div class="card card column is-half is-offset-one-quarter">
+                <div class="card custom-card column is-half is-offset-one-quarter">
                     <header class="card-header">
-                        <p class="card-header-title">
-                            {{ __('Reset Password') }}
-                        </p>
+                        <h1 class="card-header-title is-centered">{{ __('Reset Password') }}</h1>
                     </header>
                     <div class="card-content">
                         <div class="content">
-                            <form method="POST" action="{{ route('password.update') }}" id="reset-password">
+                            <form method="POST" action="{{ route('password.update') }}">
                                 @csrf
 
                                 <input type="hidden" name="token" value="{{ $token }}">
 
                                 <div class="field">
-                                    <label class="label">{{ __('E-Mail Address') }}</label>
+                                    <label class="label" for="email">{{ __('E-Mail Address') }}</label>
                                     <div class="control">
                                         <input name="email" class="input @error('email') is-danger @enderror"
-                                               type="email"
+                                               type="email" id="email"
                                                value="{{ $email ?? old('email') }}" required autocomplete="email"
                                                autofocus>
                                     </div>
@@ -31,10 +29,10 @@
                                 </div>
 
                                 <div class="field">
-                                    <label class="label">{{ __('Password') }}</label>
+                                    <label class="label" for="password">{{ __('Password') }}</label>
                                     <div class="control">
                                         <input name="password" class="input @error('password') is-danger @enderror"
-                                               type="password"
+                                               type="password" id="password"
                                                required autocomplete="new-password">
                                     </div>
                                     @error('password')
@@ -43,21 +41,20 @@
                                 </div>
 
                                 <div class="field">
-                                    <label class="label">{{ __('Confirm Password') }}</label>
+                                    <label class="label" for="password-confirm">{{ __('Confirm Password') }}</label>
                                     <div class="control">
                                         <input class="input" type="password"
                                                id="password-confirm" name="password_confirmation"
                                                required autocomplete="new-password">
                                     </div>
                                 </div>
+
+                                <button type="submit" class="button is-large is-primary is-outlined is-fullwidth">
+                                    {{ __('Send Password Reset Link') }}
+                                </button>
                             </form>
                         </div>
                     </div>
-                    <footer class="card-footer">
-                        <a href="#" class="button is-primary" onclick="event.preventDefault();
-                                                     document.getElementById('reset-password').submit();">
-                            {{ __('Reset Password') }}</a>
-                    </footer>
                 </div>
             </div>
         </div>
