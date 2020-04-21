@@ -63,7 +63,7 @@
 
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
-                            Templates
+                            Sample
                         </a>
 
                         <div class="navbar-dropdown">
@@ -117,7 +117,7 @@
 
     <footer class="footer">
         <div class="content has-text-centered">
-            <small>&copy; FH Technikum Dominik Ertl, Adnan Vatric</small>
+            <small>Here comes some footer</small>
         </div>
     </footer>
 </div>
