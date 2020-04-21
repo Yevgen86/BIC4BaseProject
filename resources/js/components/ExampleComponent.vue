@@ -1,12 +1,15 @@
 <template>
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
-
-                    <div class="card-body">
-                        I'm an example component.
+        <div class="columns is-multiline">
+            <div class="card column is-half is-offset-one-quarter">
+                <header class="card-header">
+                    <h1 class="card-header-title">
+                        {{ title }}
+                    </h1>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <slot></slot>
                     </div>
                 </div>
             </div>
@@ -16,6 +19,7 @@
 
 <script>
     export default {
+        props: ['title'],
         mounted() {
             console.log('Component mounted.')
         }

@@ -63,35 +63,18 @@
 
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
-                            Erfindungen
+                            Sample
                         </a>
 
                         <div class="navbar-dropdown">
-                            <a class="navbar-item" href="{{ route('inventions') }}">
-                                Liste
+                            <a class="navbar-item">
+                                List
                             </a>
-                            <a class="navbar-item" href="{{ route('inventions.create') }}">
-                                Erstellen
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">
-                            Gebiete
-                        </a>
-
-                        <div class="navbar-dropdown">
-                            <a class="navbar-item" href="{{ route('domains') }}">
-                                Liste
-                            </a>
-                            <a class="navbar-item" href="{{ route('domains.create') }}">
-                                Erstellen
+                            <a class="navbar-item">
+                                Create
                             </a>
                         </div>
                     </div>
-
-                </div>
             @endauth
 
             <div class="navbar-end">
@@ -133,7 +116,7 @@
 
     <footer class="footer">
         <div class="content has-text-centered">
-            <small>&copy; FH Technikum Dominik Ertl, Adnan Vatric</small>
+            <small>Here comes some footer</small>
         </div>
     </footer>
 </div>
